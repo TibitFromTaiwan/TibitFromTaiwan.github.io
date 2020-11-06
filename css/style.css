@@ -1,4 +1,40 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+/* menu */
+.navbar-container {
+    width: 100%;
+    height: 80px;
+}
+.navbar-container:hover nav#main {
+    transform: translateY(0px);
+}
+nav#main {
+    width: 1080px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: black;
+    transform: translateY(-50px);
+    transition: 0.3s;
+    --bd-radius: 20px;
+    border-radius: 0 0 var(--bd-radius) var(--bd-radius);
+    box-shadow: 5px 4px 12px 0 rgb(116, 116, 116);
+}
+
+/* aside */
+aside {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+}
+
+/* main page */
+.main-page {
+    width: 1080px;
+    height: 720px;
+    background-color: #ddd;
+    margin: 0 auto;
 }
