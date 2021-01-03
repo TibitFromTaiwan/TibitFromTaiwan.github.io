@@ -3,13 +3,18 @@ var glass_filled = false
 glass.addEventListener('click', () => {
     if (!glass_filled) {
         glass.animate([
-            { transform: 'translate(-50%, -50%)' }
+            {
+                transform: 'translate(-50%, -50%)',
+            }
         ], {
-            duration: 200,
+            duration: 400,
             fill: 'forwards'
         })
         glass.animate([
-            { width: 'max(200vw, 200vh)', height: 'max(200vw, 200vh)' }
+            {
+                width: 'max(100vw, 100vh)',
+                height: 'max(100vw, 100vh)'
+            }
         ], {
             duration: 400,
             fill: 'forwards'
@@ -18,13 +23,13 @@ glass.addEventListener('click', () => {
     }
     else {
         glass.animate([
-            { transform: 'translate(-50%, 60%)' }
+            { transform: 'translate(-50%, 300%)' }
         ], {
             duration: 200,
             fill: 'forwards'
         })
         glass.animate([
-            { width: '300px', height: '300px' }
+            { width: 'var(--glass-size)', height: 'var(--glass-size)' }
         ], {
             duration: 200,
             fill: 'forwards'
