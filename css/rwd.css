@@ -5,11 +5,14 @@
     .subtitle-container {
         font-size: 0.5rem;
     }
+    .subtitle-container p {
+        display: block;
+    }
 
     .subtitle-container .tag-wrapper {
-        display: block;
         width: auto;
-        margin: 10px;
+        display: block;
+        margin-top: 1em;
     }
 
     .title {
