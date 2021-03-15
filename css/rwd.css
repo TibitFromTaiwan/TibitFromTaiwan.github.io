@@ -2,11 +2,14 @@
     .title-container > h1 {
         font-size: 1.8rem;
     }
+    .subtitle-container {
+        font-size: 0.5rem;
+    }
 
     .subtitle-container .tag-wrapper {
         display: block;
         width: auto;
-        margin: 20px;
+        margin: 10px;
     }
 
     .title {

@@ -62,7 +62,7 @@
 .subtitle-container span {
     user-select: none;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 0.2em 0.4em;
 }
 .subtitle-container .html {
     background-color: #ff7300;
