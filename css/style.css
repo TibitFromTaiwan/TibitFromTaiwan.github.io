@@ -4,28 +4,23 @@
     box-sizing: border-box;
 }
 :root {
-    --title-color: #000000;
+    --title-color: hsl(0, 0%, 92%);
 }
-
 @font-face {
     font-family: 'Fira Code Medium';
     src: url('../font/FiraCode-Medium.ttf');
 }
 
-.nav-bar {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    background-color: black;
-}
 .main {
-    background: linear-gradient(217deg, #ff0000cc, #ff000000 70.71%), linear-gradient(127deg, #00ff00cc, #00ff0000 70.71%),
-        linear-gradient(336deg, #0000ffcc, #0000ff00 70.71%);
+    background: hsl(0, 0%, 20%);
     display: grid;
     place-items: center;
     height: 100vh;
 }
+
 .title {
+    color: var(--title-color);
+    padding: 100px;
     width: auto;
     font-family: Fira Code Medium;
 }
@@ -33,7 +28,7 @@
     display: flex;
     justify-content: center;
 }
-.title-container > h1 {
+.title-container h1 {
     font-size: 3rem;
 }
 .title-content {
@@ -43,10 +38,27 @@
     white-space: nowrap;
     animation: typing 2s steps(15, end) forwards;
 }
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
 .cursor {
-    color: var(--title-color);
     animation: cursor 1s step-end infinite;
 }
+@keyframes cursor {
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: var(--title-color);
+    }
+}
+
 .subtitle-container {
     font-weight: 600;
     margin-top: 2em;
@@ -79,22 +91,4 @@
 .subtitle-container .py {
     background-color: #306998;
     color: #ffd43b;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@keyframes cursor {
-    from,
-    to {
-        color: transparent;
-    }
-    50% {
-        color: var(--title-cursor-color);
-    }
 }

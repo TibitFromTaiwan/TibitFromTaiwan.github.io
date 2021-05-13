@@ -12,10 +12,14 @@
                 --blur-cursor-size: 200px;
             }
             .blur-cursor {
+                position: absolute;
                 width: 200px;
                 height: 200px;
                 border-radius: 50%;
-                backdrop-filter: blur(1 0px);
+                background: hsla(0, 0%, 100%, 0.15);
+                backdrop-filter: blur(10px);
+                border: 2px solid transparent;
+                background-clip: padding-box;
             }
         </style>
     </head>
@@ -24,6 +28,8 @@
     </body>
     <script>
         var cursor = document.querySelector('.blur-cursor')
-        cursor.addEventListener()
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translateX(${e.clientX - 100}px) translateY(${e.clientY - 100}px)`
+        })
     </script>
 </html>
