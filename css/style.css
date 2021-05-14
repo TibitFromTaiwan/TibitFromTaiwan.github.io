@@ -5,6 +5,14 @@
 }
 :root {
     --title-color: hsl(0, 0%, 92%);
+    --tag-color-html: #ff7300;
+    --tag-color-css: #006eff;
+    --tag-color-js: #ffe600;
+    --tag-color-python-y: #ffd43b;
+    --tag-color-python-b: #306998;
+}
+::selection {
+    background: hsla(188, 46%, 40%, 0.507);
 }
 @font-face {
     font-family: 'Fira Code Medium';
@@ -16,12 +24,12 @@
     display: grid;
     place-items: center;
     height: 100vh;
+    width: 100vw;
 }
 
 .title {
     color: var(--title-color);
-    padding: 100px;
-    width: auto;
+    padding: 1rem;
     font-family: Fira Code Medium;
 }
 .title-container {
@@ -73,22 +81,27 @@
 }
 .subtitle-container span {
     user-select: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    border-width: 3px;
+    border-style: solid;
     padding: 0.2em 0.4em;
 }
 .subtitle-container .html {
-    background-color: #ff7300;
-    color: #000052;
+    border-color: var(--tag-color-html);
+    box-shadow: 0 0 10px 2px var(--tag-color-html), inset 0 0 6px 1px var(--tag-color-html);
 }
 .subtitle-container .css {
-    background-color: rgb(0, 0, 194);
-    color: #ffee00;
+    border-color: var(--tag-color-css);
+    box-shadow: 0 0 10px 2px var(--tag-color-css), inset 0 0 6px 2px var(--tag-color-css);
 }
 .subtitle-container .js {
-    background-color: rgb(255, 230, 0);
-    color: black;
+    border-color: var(--tag-color-js);
+    box-shadow: 0 0 12px 0 var(--tag-color-js), inset 0 0 6px 1px var(--tag-color-js);
 }
 .subtitle-container .py {
-    background-color: #306998;
-    color: #ffd43b;
+    border-color: var(--tag-color-python-b);
+    box-shadow: 5px 5px 8px -2px var(--tag-color-python-y), inset -4px -4px 4px -3px var(--tag-color-python-y), -5px -5px 8px -2px var(--tag-color-python-b),
+        inset 3px 3px 4px 0px var(--tag-color-python-b);
+    border-bottom-color: var(--tag-color-python-y);
+    border-right-color: var(--tag-color-python-y);
 }
