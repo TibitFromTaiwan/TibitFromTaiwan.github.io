@@ -1,4 +1,9 @@
 @media screen and (max-width: 750px) {
+    .menu-button {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
     .title-container h1 {
         font-size: 1.8rem;
     }
@@ -8,7 +13,6 @@
     .subtitle-container p {
         display: block;
     }
-
     .subtitle-container .tag-wrapper {
         width: auto;
         display: block;

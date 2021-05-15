@@ -8,12 +8,14 @@ document.querySelector('.menu-button').addEventListener('click', () => {
     if (menuIsClicked) {
         menu.style.zIndex = 127
         menu.style.backdropFilter = 'blur(15px)'
+        menu.style.WebkitBackdropFilter = 'blur(15px)'
         menu.style.backgroundColor = 'hsla(0, 0%, 100%, 0.1)'
         menuIconTop.style.transform = 'translateX(3px) rotate(45deg)'
         menuIconBottom.style.transform = 'translateX(3px) rotate(-45deg)'
     } else {
         menu.style.zIndex = ''
         menu.style.backdropFilter = ''
+        menu.style.WebkitBackdropFilter = ''
         menu.style.backgroundColor = 'hsla(0, 0%, 100%, 0)'
         menuIconTop.style.transform = ''
         menuIconBottom.style.transform = ''
