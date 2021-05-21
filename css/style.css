@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 :root {
     --title-color: hsl(0, 0%, 92%);
@@ -19,7 +20,9 @@
     src: url('../font/FiraCode-Medium.ttf');
 }
 body {
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1;
+    overflow-x: hidden;
 }
 .main {
     background: hsl(0, 0%, 12%);
@@ -31,12 +34,18 @@ body {
 .menu {
     z-index: -1;
     position: fixed;
+    display: grid;
     width: 100vw;
     height: 100vh;
     transition: 0.3s ease-in-out;
     place-items: center;
 }
-.menu-content {
+.menu-link-wrapper {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    transition-delay: 0.1s;
+}
+.menu-link {
     color: hsl(54, 100%, 50%);
     font-family: 'Fira Code Medium';
     font-size: 2rem;
@@ -51,11 +60,15 @@ body {
     right: 3rem;
     top: 3rem;
 }
+.menu-button:hover .menu-button-icon div {
+    background: hsl(60, 100%, 82%);
+    box-shadow: 0 0 8px 2px hsla(60, 100%, 90%, 0.5);
+}
 .menu-button-icon .top-side {
     position: absolute;
     width: 30px;
     height: 5px;
-    background-color: white;
+    background: white;
     top: 12px;
     left: 10px;
     transform-origin: left center;
@@ -114,7 +127,7 @@ body {
 
 .subtitle-container {
     font-weight: 600;
-    margin-top: 2em;
+    margin-top: 4rem;
     font-size: 1rem;
     text-align: center;
 }
@@ -145,8 +158,12 @@ body {
 }
 .subtitle-container .py {
     border-color: var(--tag-color-python-b);
-    box-shadow: 5px 5px 8px -2px var(--tag-color-python-y), inset -4px -4px 4px -3px var(--tag-color-python-y), -5px -5px 8px -2px var(--tag-color-python-b),
+    box-shadow: 5px 5px 12px -2px var(--tag-color-python-y), inset -4px -4px 4px -3px var(--tag-color-python-y), -5px -5px 8px -2px var(--tag-color-python-b),
         inset 3px 3px 4px 0px var(--tag-color-python-b);
     border-bottom-color: var(--tag-color-python-y);
     border-right-color: var(--tag-color-python-y);
+}
+
+.main-content {
+    height: 100vh;
 }
