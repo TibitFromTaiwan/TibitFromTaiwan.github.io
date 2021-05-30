@@ -14,14 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="origin" />
   <meta name="generator" content="Pelican" />
-  <link href="" rel="canonical" />
+  <link href="." rel="canonical" />
 
   <!-- Feed -->
 
-  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
 
   <!-- Code highlight color scheme -->
-      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+      <link href="./theme/css/code_blocks/github.css" rel="stylesheet">
 
 
   <!-- Custom fonts -->
@@ -40,8 +40,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="2,147,483,647" />
     <meta property="og:description" content="View the blog." />
-    <meta property="og:url" content="" />
-      <meta property="og:image" content="/hover.jpg" />
+    <meta property="og:url" content="." />
+      <meta property="og:image" content="./static/image/hover.jpg" />
+      <meta property="article:publisher" content="https://facebook.com/myprofile" />
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@myprofile">
+      <meta name="twitter:title" content="2,147,483,647">
+      <meta name="twitter:description" content="View the blog.">
+      <meta name="twitter:url" content=".">
+          <meta name="twitter:image:src" content="./static/image/hover.jpg">
 </head>
 <!-- TODO : Body class -->
 <body class="home-template">
@@ -62,20 +69,30 @@
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
-                <a class="home-button" href="" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+                <a class="home-button" href="." title="Home"><i class="ic ic-arrow-left"></i> Home</a>
             </span>
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
         <h1 class="post-title">2,147,483,647 - Tags</h1>
-            <div class="blog-cover cover" style="background-image: url('hover.jpg')">            
+            <div class="blog-cover cover" style="background-image: url('static/image/hover.jpg')">            
         
       </div>
     </header>    
 
   <section id="wrapper">
     <a class="hidden-close"></a>
+    <article class="post">
+      <div class="inner">
+        <a href="./tag/algorithm.html">Algorithm</a> (1)
+      </div>
+    </article>
+    <article class="post">
+      <div class="inner">
+        <a href="./tag/c.html">C</a> (1)
+      </div>
+    </article>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
   
@@ -89,7 +106,7 @@
     </footer>
   </section>
 
-  <script type="text/javascript" src="/theme/js/script.js"></script>
+  <script type="text/javascript" src="./theme/js/script.js"></script>
   
 </body>
 </html>
