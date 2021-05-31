@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>Genetic Algorithm Implement</title>
+  <title>高效率系列#1 : Windows系統常用快捷鍵</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -36,14 +36,11 @@
   <![endif]-->
 
 
-    <link href="./genetic-algorithm-implement.html" rel="canonical" />
+    <link href="./gao-xiao-lu-xi-lie-1-windowsxi-tong-chang-yong-kuai-jie-jian.html" rel="canonical" />
 
-        <meta name="description" content="實作基因演算法(C)">
 
         <meta name="author" content="tibitTW">
 
-        <meta name="tags" content="Algorithm">
-        <meta name="tags" content="C">
 
         <meta property="og:locale" content="" />
     <meta property="og:site_name" content="2,147,483,647" />
@@ -55,10 +52,9 @@
 
   <meta property="og:type" content="article">
             <meta property="article:author" content="./author/tibittw.html">
-  <meta property="og:url" content="./genetic-algorithm-implement.html">
-  <meta property="og:title" content="Genetic Algorithm Implement">
+  <meta property="og:url" content="./gao-xiao-lu-xi-lie-1-windowsxi-tong-chang-yong-kuai-jie-jian.html">
+  <meta property="og:title" content="高效率系列#1 : Windows系統常用快捷鍵">
   <meta property="article:published_time" content="2021-05-30 00:00:00+08:00">
-            <meta property="og:description" content="實作基因演算法(C)">
 
             <meta property="og:image" content="./static/image/hover.jpg">
 </head>
@@ -92,7 +88,7 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Genetic Algorithm Implement</h1>
+        <h1 class="post-title">高效率系列#1 : Windows系統常用快捷鍵</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="./author/tibittw.html">Tibittw</a>
@@ -113,57 +109,57 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <h1>Summary</h1>
-<p>先簡介一下何謂Genetic Algorithm。簡而言之，就是一種演算法 (廢話)。</p>
-<p>Genetic Algorithm翻譯成中文就是"基因演算法"，是以自然界中的生物為參考而設計出來的一套演算法。因此演算法在執行的過程也與一個生物族群的演化方式極為類似。</p>
-<p>在執行過程中會計算每個基因的適應度 (<code>fitness</code>)，適應度越高可以看作這個基因越好</p>
-<p>基本上來說，基因演算法有下列步驟：</p>
+                <blockquote>
+<p>緣由：自己本身是一個很習慣用快捷鍵~~偷懶~~加快做事速度的人，也希望可以分享一些常用的快捷鍵，加快一些瑣碎步調的速度。</p>
+</blockquote>
+<h1>檔案管理</h1>
+<p>我們先從最常用的資料總管(<code>explorer.exe</code>)、或者通俗點平常說的「資料夾」開始說起吧。</p>
 <ol>
-<li>產生一個新的族群，可以當作很多基因(或生物)的集合</li>
-<li>計算每個基因的適應度</li>
-<li>依照每個基因的適應度，挑選下一代族群適合的基因。一般來說，適應度越高的基因被選取的機率將會越高。此步驟會產生一個新的族群 (也就是下一代)</li>
-<li>讓新族群內的基因組互相交配</li>
-<li>讓新族群內的基因組產生變異 (or突變)</li>
-<li><em>以上的步驟2到步驟5會重複執行，直到設定的次數或達成提早結束的條件 (如果有的話)之後，才進入到步驟7</em></li>
-<li>輸出最後結果</li>
+<li><strong>新增資料夾</strong> : <code>滑鼠右鍵</code> + <code>W</code> + <code>F</code></li>
+<li><strong>重新命名</strong> : 選取後按<code>F2</code></li>
+<li><strong>將檢視方式改為「詳細資料」模式</strong> : <code>滑鼠右鍵</code> 之後 <code>V</code> 之後 <code>D</code></li>
+<li><strong>重新整理</strong> : <code>Ctrl</code> + <code>R</code> 或 <code>F5</code>，常用在複製完資料或下載好檔案，需要讓檔案重新排序時</li>
+<li><strong>在新視窗開啟要開啟的資料夾</strong> : <code>Ctrl</code> + <code>滑鼠雙擊左鍵</code></li>
+<li><strong>關閉視窗</strong> : 除了<code>Alt</code> + <code>F4</code> 外，可以用<code>Ctrl</code> + <code>W</code> 比較符合人體工學(?)</li>
+<li><strong>快速完全刪除</strong>(不經過資源回收桶) : <code>Alt</code> + <code>Del</code></li>
 </ol>
-<p>一些參數說明：</p>
+<h1>視窗系統</h1>
 <ol>
-<li>參數：<ul>
-<li><code>Population Size</code> : 族群內的生物數量</li>
-<li><code>Iteration Count</code> : 族群會繁衍的次數，也就是說生出幾次子代(上述步驟2到步驟5執行的次數)</li>
-<li><code>Crossover Rate</code> : 交配率，族群內有幾成的生物會互相交配</li>
-<li><code>Mutation Rate</code>  : 變異率，族群內有幾成的生物會產生變異(突變)</li>
-</ul>
+<li><strong>快速回到桌面</strong> : <code>Win</code> + <code>D</code>，或鼠標移到螢幕右下角(沒有改過工作列的位置的話)按一下。</li>
+<li>切換視窗 : <code>Alt</code> + <code>Tab</code>可以直接用鍵盤控制，<code>Win</code> + <code>Tab</code> 需要再用滑鼠選要切換的視窗，不過後者有管理虛擬桌面的功能。</li>
+<li><strong>將視窗快速貼齊螢幕的上下左右</strong> : <code>Win</code> + 上下左右鍵，會讓視窗自動填滿螢幕的右半邊、左下部分等，具體怎麼運作試過就知道😎，在需要將螢幕分成兩邊時非常方便。</li>
+</ol>
+<h1>其他雜項</h1>
+<ol>
+<li>
+<p><strong>快速開啟工作列的程式</strong> : <code>Win</code> + <code>1</code> ~ <code>0</code>，數字分別對應工作列前十個程式。舉例來說，我的工作列第一項為檔案總管，第二項為Google Chrome， 則<code>Win</code> + <code>1</code>會開啟檔案總管，<code>Win</code> + <code>2</code>會開啟Chrome瀏覽器。</p>
+</li>
+<li>
+<p><strong>快速關機</strong> : <code>Win</code> + <code>D</code> 之後 <code>Alt</code> + <code>F4</code> 之後<code>Enter</code></p>
+</li>
+<li>
+<p><strong>隱藏桌面資料夾</strong> : 在桌面按右鍵後依序按<code>V</code>, <code>D</code>
+    我會習慣將桌面的內容隱藏，所以算是小眾用途</p>
 </li>
 </ol>
-<h1>實作</h1>
-<p>以下就使用Genetic Algorithm 來做 One Max Problem。在此之前要先簡介一下One Max Problem：</p>
-<h3>One Max Problem</h3>
-<p>其實是個很簡單的問題：考慮一個位元字串(每一位的值為0或1)，目標是讓此字串的總值最大化。</p>
-<p>假設字串的長度為8，則 :</p>
-<p><code>[1,0,0,0,1,1,0,0]</code> : 總值為3</p>
-<p><code>[1,1,1,1,0,0,1,1]</code> : 總值為6</p>
-<p><code>[1,1,1,1,1,1,1,1]</code> : 總值為8</p>
-<p>也就是說，目標是讓整個字串的每個位元都為1。人類當然可以很直覺的判斷，但接下來我們便要使用基因演算法來實作這個問題。</p>
+<hr>
+<p>以上就是一些Windows系統內我自己常用的快捷鍵，</p>
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=Genetic Algorithm Implement&amp;url=./genetic-algorithm-implement.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=高效率系列#1 : Windows系統常用快捷鍵&amp;url=./gao-xiao-lu-xi-lie-1-windowsxi-tong-chang-yong-kuai-jie-jian.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./genetic-algorithm-implement.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./gao-xiao-lu-xi-lie-1-windowsxi-tong-chang-yong-kuai-jie-jian.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=./genetic-algorithm-implement.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=./gao-xiao-lu-xi-lie-1-windowsxi-tong-chang-yong-kuai-jie-jian.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
                 </div>
 
-                <aside class="post-tags">
-<a href="./tag/algorithm.html">Algorithm</a><a href="./tag/c.html">C</a>                </aside>
 
                 <div class="clear"></div>
 
