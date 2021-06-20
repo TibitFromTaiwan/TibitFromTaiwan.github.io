@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TRACKER</title>
+    </head>
+    <style>
+        * {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+        }
+    </style>
+    <body></body>
+    <script>
+        var startTimeInMs = Date.now()
+        const hexStr = '0123456789ABCDEF'
+        appendText = (text, timeout = 500) => {
+            setTimeout(() => {
+                var node = document.createElement('p')
+                var timeNow = Date.now()
+                node.innerText = `[${timeNow - startTimeInMs}] ${text}`
+                document.body.appendChild(node)
+            }, timeout)
+        }
+        appendText('Initializing', 0)
+        appendText('Getting user data', 300)
+        appendText('Checking current status', 500)
+        appendText('Authorization passed.', 1500)
+        for (var i = 0; i < 15; i++) {
+            res = ''
+            for (var ti = 0; ti < 64; ti++) {
+                rdn = Math.floor(Math.random() * 16)
+                res += hexStr[rdn]
+            }
+            appendText('Get Data : ' + res, 1500 + i * 50)
+        }
+        appendText('Start Monitoring ...', 3000)
+    </script>
+</html>
