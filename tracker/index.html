@@ -25,9 +25,14 @@
                 document.body.appendChild(node)
             }, timeout)
         }
+
         appendText('Initializing', 0)
         appendText('Getting user data', 300)
         appendText('Checking current status', 500)
+        appendText('Getting screen monitor permission...', 600)
+        appendText('Getting screen monitor permission succeed', 800)
+        appendText('Getting keyboard tracking permission...', 900)
+        appendText('Getting keyboard tracking permission succeed', 1200)
         appendText('Authorization passed.', 1500)
         for (var i = 0; i < 15; i++) {
             res = ''
@@ -35,7 +40,7 @@
                 rdn = Math.floor(Math.random() * 16)
                 res += hexStr[rdn]
             }
-            appendText('Get Data : ' + res, 1500 + i * 50)
+            appendText('Get Test Data : ' + res, 2000 + i * 20)
         }
         appendText('Start Monitoring ...', 3000)
     </script>
