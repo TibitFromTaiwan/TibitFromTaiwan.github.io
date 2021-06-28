@@ -4,11 +4,15 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>HBHB</title>
         <style>
             @font-face {
                 font-family: FakePearl-Regular;
                 src: url(./font/FakePearl-Regular.woff);
+            }
+            :root {
+                --title-content-size: 400px;
+                --title-content-size-pwd: 70vw;
             }
             * {
                 padding: 0;
@@ -24,24 +28,44 @@
             }
             .title {
                 display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 40vh 10vh 30vh;
+                row-gap: 2vh;
+                justify-items: center;
                 align-items: center;
-                width: 1280px;
+
+                width: var(--title-content-size);
                 height: 90vh;
                 margin-top: 4rem;
-                background: linear-gradient(hsl(0, 100%, 72%), transparent), linear-gradient(120deg, rgb(97, 97, 255) 40%, transparent),
-                    linear-gradient(240deg, rgb(109, 255, 109) 120%, transparent);
+            }
+            .title-content {
+                height: 40vh;
+                width: 40vh;
+                background: linear-gradient(hsla(0, 100%, 67%, 0.849), transparent), linear-gradient(120deg, rgb(88, 88, 255) 40%, transparent),
+                    linear-gradient(240deg, rgb(66, 255, 66) 120%, transparent);
                 background-repeat: no-repeat;
                 background-position: top center;
                 background-size: cover;
                 mask: url(./img/title.png) no-repeat center center;
                 -webkit-mask: url(./img/title.png) no-repeat center center;
-                mask-size: 1280px;
-                -webkit-mask-size: 600px;
+                mask-size: var(--title-content-size);
+                -webkit-mask-size: var(--title-content-size);
             }
-            .title-img {
-                width: 800px;
-                opacity: 0.2;
+            .title-p-name {
+                font-family: FakePearl-Regular;
+                font-size: 3rem;
+                color: rgb(87, 87, 45);
             }
+            .title-photo {
+                background: url(./img/koieshu.jpg);
+                height: 30vh;
+                width: 30vh;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                filter: contrast();
+            }
+
             .blessing {
                 font-family: FakePearl-Regular;
                 font-size: 1.6rem;
@@ -68,18 +92,28 @@
             }
             @media screen and (max-width: 800px) {
                 .main-block {
-                    width: 80%;
+                    width: var(--title-content-size-pwd);
                 }
                 .title {
-                    width: 80%;
-                    height: 90vh;
-                    mask-size: 80%;
-                    -webkit-mask-size: 80%;
+                    width: var(--title-content-size-pwd);
+                    margin-top: 4rem;
+                    grid-template-rows: 35vh 10vh 30vh;
+                }
+                .title-content {
+                    width: var(--title-content-size-pwd);
+                    mask-size: var(--title-content-size-pwd);
+                    -webkit-mask-size: var(--title-content-size-pwd);
+                }
+                .title-p-name {
+                    font-size: 1.5rem;
+                }
+                .title-photo {
+                    width: 50vw;
+                    height: 50vw;
                 }
                 .blessing {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     padding: 1.4rem 2rem;
-                    /* margin: 1rem; */
                     float: none !important;
                 }
             }
@@ -87,7 +121,9 @@
     </head>
     <body>
         <div class="main-block title">
-            <!-- <img class="title-img" src="./img/title.png" alt="" /> -->
+            <div class="title-content"></div>
+            <div class="title-p-name">For Koie Shu</div>
+            <div class="title-photo"></div>
         </div>
         <div class="main-block main-content">
             <div class="blessing">
@@ -141,9 +177,18 @@
             </div>
             <div class="blessing">
                 To 凱智學長<br />
-                祝你生日快樂~後學很感恩你之前曾和後學提過吃素的事，這真的是後學清口的一大祝緣!即便我們只有同家族一次，但還是很謝謝你之前的照顧或是對後學妹妹的關心!也恭喜你即將完成培訓成為講師!祝福你能突破各種障礙，照見內心最圓滿的佛性，希望你能在修辦路上堅定不移地前進，一刻都不鬆懈、一起努力的渡化更多有緣眾生。<br />
+                祝你生日快樂~後學很感恩你之前曾和後學提過吃素的事，這真的是後學清口的一大助緣!即便我們只有同家族一次，但還是很謝謝你之前的照顧或是對後學妹妹的關心!也恭喜你即將完成培訓成為講師!祝福你能突破各種障礙，照見內心最圓滿的佛性，希望你能在修辦路上堅定不移地前進，一刻都不鬆懈、一起努力的渡化更多有緣眾生。<br />
                 怡君
             </div>
+            <div class="blessing">
+                凱智學長:<br />
+                生日快樂，接下來的一年在同家族，讓我們彼此互相學習，祝事業圓滿、學佛順利。 <br />泰晉
+            </div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
             <div class="blessing"></div>
             <div class="blessing"></div>
         </div>
