@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @font-face {
+                font-family: FakePearl-Regular;
+                src: url(./font/FakePearl-Regular.woff);
+            }
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                background: linear-gradient(90deg, rgb(249, 255, 199), rgb(255, 202, 202));
+                background-attachment: fixed;
+            }
+            .main-block {
+                margin: 0 auto;
+                width: 1280px;
+            }
+            .title {
+                display: grid;
+                align-items: center;
+                width: 1280px;
+                height: 800px;
+                margin-top: 4rem;
+                background: linear-gradient(hsl(0, 100%, 72%), transparent), linear-gradient(120deg, rgb(97, 97, 255) 40%, transparent),
+                    linear-gradient(240deg, rgb(109, 255, 109) 120%, transparent);
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-size: cover;
+                mask: url(./img/title.png) no-repeat center center;
+                -webkit-mask: url(./img/title.png) no-repeat center center;
+                mask-size: 1280px;
+                -webkit-mask-size: 600px;
+            }
+            .title-img {
+                width: 800px;
+                opacity: 0.2;
+            }
+            .blessing {
+                font-family: FakePearl-Regular;
+                font-size: 1.6rem;
+                margin: 4rem auto;
+                padding: 2rem 4rem;
+                border-radius: 1rem;
+                box-shadow: 0 -4px 20px 7px hsla(0, 0%, 23%, 0.2);
+                transition: 0.3s ease-in-out;
+            }
+            .blessing:hover {
+                box-shadow: 0 -4px 20px 10px hsla(0, 0%, 23%, 0.3);
+            }
+            .blessing:nth-child(odd) {
+                float: left;
+                width: 80%;
+                color: hsl(158, 30%, 16%);
+                background: linear-gradient(hsla(160, 100%, 83%, 0.8), rgba(245, 255, 252, 0.205));
+            }
+            .blessing:nth-child(even) {
+                float: right;
+                width: 80%;
+                color: hsl(60, 30%, 20%);
+                background: linear-gradient(hsla(66, 100%, 75%, 0.781), hsla(66, 100%, 86%, 0.226));
+            }
+            @media screen and (max-width: 800px) {
+                .main-block {
+                    width: 80%;
+                }
+                .title {
+                    width: 80%;
+                    height: 90vh;
+                    mask-size: 80%;
+                    -webkit-mask-size: 80%;
+                }
+                .blessing {
+                    font-size: 1.2rem;
+                    padding: 1.4rem 2rem;
+                    /* margin: 1rem; */
+                    float: none !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-block title">
+            <!-- <img class="title-img" src="./img/title.png" alt="" /> -->
+        </div>
+        <div class="main-block main-content">
+            <div class="blessing">
+                TO 凱智
+                一年的生日又到了！想必今年的七月生日會很不同，因為你決定回中部面對家人及工作，這個決定一定鼓起很大的勇氣，當初後學也是苦惱了許久才下定決心回旗山，聽朝楠學長說即使回中部你也會繼續在禮家線上學習，後學覺得這觀念很好，當初後學回旗山也是抱著伙食團的活動一定要繼續參與，因為後學知道回到旗山沒有像伙食團的環境可以學習，如果就此脫離了道場後學的生活及生命一定會變得很糟糕，而後也真的印證在後學身上，回到家首要面對爸爸的負面情緒，還有自理生活大小事、承擔家裡的事物，再來工作上的壓力…等等，現在想想很慶幸當時決定繼續在伙食團學習，將靜修、念佛、聽佛樂、上課的觀念等方法運用在生活上，才能一路走來一一化解，所以要堅信你這個決定，即使回到中部也不要脫離了伙食團和道場。<br />
+                畢竟也在禮家相處一年多了，由衷地祝福你的生命和生活能更好，只要你有心禮家會持續關心著你，加油！也祝你生日快樂、事事如意！ BY育婷
+            </div>
+            <div class="blessing">
+                DEAR 凱智學長 祝你生日快樂~ 也恭喜你講員班即將要畢業了!<br />
+                相信這一路上有很多心路歷程及收穫(有空可以跟我們這些小後學分享一下喔!哈哈)<br />
+                也謝謝你那時在圓德班的護持<br />
+                祝福你在未來的日子裡,能一直再修辦道的道路上找尋自我<br />
+                更明白這輩子的因緣及了脫生死輪迴。<br />
+                by 社福玉婷~
+            </div>
+            <div class="blessing">
+                凱智學長生日快樂~<br />
+                不知道為什麼對你的印象幾乎都是沒睡飽的狀態，所以想要祝福你每天都可以有充足的睡眠XD<br />
+                也祝福你今後身體健康、工作順利!<br />
+                心妤
+            </div>
+            <div class="blessing">
+                凱智學長：<br />
+                在一年一度的這個特別的日子裡祝學長生日快樂！也祝福學長在接下來的每一天都能夠讓生命一步一步地轉變和成長，每天都法喜充滿，平安喜樂！<br />
+                BY華芳
+            </div>
+            <div class="blessing">凱智 生日快樂，祝您吉祥如意，工作上設計圖也越畫越好，賺大錢，重要的是生日這天要許下自己的願望。 慈志敬上</div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+            <div class="blessing"></div>
+        </div>
+    </body>
+</html>
