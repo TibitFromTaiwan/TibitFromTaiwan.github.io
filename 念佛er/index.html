@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/main-page.css" />
         <style class="test">
             .main-menu {
-                display: none;
+                display: none !important;
             }
         </style>
     </head>
@@ -25,12 +25,23 @@
         <div class="mode-page auto-mode-page">auto mode page</div>
         <div class="mode-page menual-mode-page">
             <div class="setting-panel menual-mode-setting-panel">
-                <p class="setting-panel-title">手動模式</p>
-                <p class="setting-count-group">
-                    <p>設定次數 :</p>
-                    </p>
-                <p class="input-group"><input type="number" min="1" max="100000" /> <span> 次 </span></p>
-                <div class="comfirm-btn">確定</input>
+                <div class="setting-panel-title">［手動模式］</div>
+                <div class="white-noise">
+                    <span> 是否加入白噪音 :</span>
+                    <div class="if-btn if-white-noise-btn">是</div>
+                </div>
+                <div class="chime-sound">
+                    <span> 是否加入頌缽 :</span>
+                    <div class="if-btn if-chime-noise-btn">是</div>
+                </div>
+                <div class="chime-interval">
+                    <span>設定頌缽間隔 :</span> <input class="count-input" type="number" value="100" min="10" max="100000" /> <span> 秒 </span>
+                </div>
+                <div class="setting-count-group">
+                    <span>設定次數 :</span>
+                    <input class="count-input" type="number" value="500" min="1" max="100000" /> <span> 次 </span>
+                </div>
+                <div class="comfirm-btn">確定</div>
             </div>
         </div>
         <script>
@@ -100,6 +111,31 @@
             // window.setInterval(() => {
             //     playMuyu()
             // }, 1000)
+        </script>
+        <script>
+            var ifAddWhiteNoise = true
+            var whiteNoiseBtn = document.querySelector('.if-white-noise-btn')
+            whiteNoiseBtn.addEventListener('touchend', () => {
+                if (whiteNoiseBtn.innerHTML == '是') {
+                    whiteNoiseBtn.innerHTML = '否'
+                    whiteNoiseBtn.style['background'] = styles.getPropertyValue('--btn-color-n')
+                } else if (whiteNoiseBtn.innerHTML == '否') {
+                    whiteNoiseBtn.innerHTML = '是'
+                    whiteNoiseBtn.style['background'] = styles.getPropertyValue('--btn-color-y')
+                }
+                ifAddWhiteNoise = !ifAddWhiteNoise
+            })
+
+            var chimeBtn = document.querySelector('.if-chime-noise-btn')
+            chimeBtn.addEventListener('touchend', () => {
+                if (chimeBtn.innerHTML == '是') {
+                    chimeBtn.innerHTML = '否'
+                    chimeBtn.style['background'] = styles.getPropertyValue('--btn-color-n')
+                } else if (chimeBtn.innerHTML == '否') {
+                    chimeBtn.innerHTML = '是'
+                    chimeBtn.style['background'] = styles.getPropertyValue('--btn-color-y')
+                }
+            })
         </script>
     </body>
 </html>
