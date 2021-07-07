@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/main-page.css" />
+        <style class="test">
+            .main-menu {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="win main-menu">
+            <div class="mode-btn-wrapper auto-mode-btn-wrapper">
+                <div class="mode-btn auto-mode-btn">自動<br />模式</div>
+            </div>
+            <div class="mode-btn-wrapper menual-mode-btn-wrapper">
+                <div class="mode-btn menual-mode-btn">手動<br />模式</div>
+            </div>
+        </div>
+        <div class="mode-page auto-mode-page">auto mode page</div>
+        <div class="mode-page menual-mode-page">
+            <div class="setting-panel menual-mode-setting-panel">
+                <p class="setting-panel-title">手動模式</p>
+                <p class="setting-count-group">
+                    <p>設定次數 :</p>
+                    </p>
+                <p class="input-group"><input type="number" min="1" max="100000" /> <span> 次 </span></p>
+                <div class="comfirm-btn">確定</input>
+            </div>
+        </div>
+        <script>
+            var styles = getComputedStyle(document.body)
+            // main menu
+            var mode = 0 // mode 1 : auto mode, mode 2 : menual mode
+            var mainMenu = document.querySelector('.win.main-menu')
+            var automodeBtn = document.querySelector('.auto-mode-btn')
+            var menualmodeBtn = document.querySelector('.menual-mode-btn')
+
+            mainMenu.addEventListener('touchend', () => {
+                automodeBtn.style['background'] = styles.getPropertyValue('--auto-mode-btn-color')
+                menualmodeBtn.style['background'] = styles.getPropertyValue('--menual-mode-btn-color')
+            })
+
+            automodeBtn.addEventListener('touchstart', () => {
+                automodeBtn.style['background'] = styles.getPropertyValue('--auto-mode-btn-color-touched')
+            })
+            menualmodeBtn.addEventListener('touchstart', () => {
+                menualmodeBtn.style['background'] = styles.getPropertyValue('--menual-mode-btn-color-touched')
+            })
+
+            automodeBtn.addEventListener('click', () => {
+                mainMenu.style['display'] = 'none'
+                mode = 1
+            })
+            menualmodeBtn.addEventListener('click', () => {
+                mainMenu.style['display'] = 'none'
+                mode = 2
+            })
+        </script>
+        <script>
+            loadAudioFiles = () => {
+                // load audio files, clone to multi object to play audios at the same time
+                var muyu = new Audio('./sounds/muyu.mp3')
+                var muyuArr = [muyu, muyu.cloneNode(), muyu.cloneNode(), muyu.cloneNode()]
+                var chime = new Audio('./sounds/chime.mp3')
+                var chimeArr = [chime, chime.cloneNode(), chime.cloneNode(), chime.cloneNode()]
+                var chime2 = new Audio('./sounds/chime2.mp3')
+            }
+            // function of play audio
+            var mi = 0
+            playMuyu = () => {
+                if (!muyuArr[mi].paused) {
+                    mi = (mi + 1) % 4
+                }
+                muyuArr[mi].play()
+                console.log('Playing :', mi)
+            }
+            var ci = 0
+            playChime = () => {
+                if (!chimeArr[ci].paused) {
+                    ci = (ci + 1) % 4
+                }
+                chimeArr[ci].play()
+                console.log('Playing :', ci)
+            }
+            loadAudioFiles()
+
+            // document.querySelector('.play-muyu').addEventListener('click', () => {
+            //     playMuyu()
+            // })
+            // document.querySelector('.play-chime').addEventListener('click', () => {
+            //     playChime()
+            // })
+
+            // window.setInterval(() => {
+            //     playMuyu()
+            // }, 1000)
+        </script>
+    </body>
+</html>
