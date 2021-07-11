@@ -7,6 +7,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/main-page.css" />
+        <link rel="stylesheet" href="./css/menual-mode-page.css" />
         <style class="test">
             .main-menu {
                 display: none !important;
@@ -41,10 +42,21 @@
                 </div>
                 <div class="n-count-group">
                     <span>設定次數 :</span>
-                    <input id="n-count" class="count-input" inputmode="numeric" type="number" value="500" min="1" max="100000" />
+                    <input id="target-amount" class="count-input" inputmode="numeric" type="number" value="500" min="1" max="100000" />
                     <span> 次 </span>
                 </div>
                 <div class="comfirm-btn">確定</div>
+            </div>
+            <div class="main-page menual-mode-count-page">
+                <div class="count-btn">
+                    <div class="content">
+                        <div class="target-content">目標 : <span class="target-amount"></span> 次</div>
+                        <div class="budda-name"></div>
+                        <div class="progress">0</div>
+                        <div class="button-icon"></div>
+                    </div>
+                </div>
+                <div class="menu-btn"></div>
             </div>
         </div>
 
@@ -157,7 +169,9 @@
                 comfirmBtn.style['background'] = styles.getPropertyValue('--comfirm-btn-color')
             })
             comfirmBtn.addEventListener('touchend', () => {
+                document.querySelector('.menual-mode-count-page .target-amount').innerHTML = document.querySelector('#target-amount').value
                 document.querySelector('.menual-mode-setting-panel').style['display'] = 'none'
+                document.querySelector('.menual-mode-count-page').style['display'] = 'block'
             })
         </script>
     </body>

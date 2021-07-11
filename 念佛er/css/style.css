@@ -7,7 +7,7 @@
     --comfirm-btn-color-touched: hsl(0, 0%, 60%);
     --btn-color-y: hsl(113, 100%, 71%);
     --btn-color-n: hsl(0, 100%, 71%);
-    --btn-border-radius: 5px;
+    --btn-border-radius: 10px;
 }
 * {
     margin: 0;
