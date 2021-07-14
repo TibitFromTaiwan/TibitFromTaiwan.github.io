@@ -3,8 +3,11 @@
     --auto-mode-btn-color-touched: hsl(0, 59%, 60%);
     --menual-mode-btn-color: hsl(182, 100%, 72%);
     --menual-mode-btn-color-touched: hsl(182, 49%, 55%);
+    --comfirm-btn-color: hsl(0, 0%, 75%);
+    --comfirm-btn-color-touched: hsl(0, 0%, 60%);
     --btn-color-y: hsl(113, 100%, 71%);
     --btn-color-n: hsl(0, 100%, 71%);
+    --btn-border-radius: 10px;
 }
 * {
     margin: 0;
@@ -22,6 +25,7 @@ input {
         background-color: white;
     }
     .mode-page {
+        z-index: 1;
         width: 80vw;
         height: 80vh;
         padding: 10vh 10vw;
@@ -54,7 +58,7 @@ input {
     }
     .setting-panel .if-btn {
         display: inline-block;
-        border-radius: 5px;
+        border-radius: var(--btn-border-radius);
         width: 60px;
         height: 30px;
         text-align: center;
@@ -62,6 +66,14 @@ input {
         background-color: var(--btn-color-y);
     }
     .setting-panel .count-input {
-        width: 4rem;
+        width: 3rem;
+    }
+    .setting-panel .comfirm-btn {
+        width: 100px;
+        height: 40px;
+        background-color: var(--comfirm-btn-color);
+        text-align: center;
+        line-height: 40px;
+        border-radius: var(--btn-border-radius);
     }
 }
