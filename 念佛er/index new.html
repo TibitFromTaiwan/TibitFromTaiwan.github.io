@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style class="test"></style>
+        <link rel="stylesheet" href="./css2/style.css" />
+    </head>
+    <body>
+        <div class="win main-page mode-chosen-page">
+            <div class="button-wrapper">
+                <div class="choose-mode-btn choose-auto-mode-btn">自動<br />模式</div>
+                <div class="choose-mode-btn choose-menual-mode-btn">手動<br />模式</div>
+            </div>
+        </div>
+        <div class="btn go-prev-page-btn"><</div>
+        <!-- <div class="btn menu-btn">三</div> -->
+
+        <div class="win auto-mode-setting-panel">
+            <div class="setting-panel-content-wrapper">
+                <h1 class="title">自動模式</h1>
+                <div class="time-amount">
+                    <span> 設定時間長度</span>
+                    <span>
+                        <input id="chime-interval" class="count-input" inputmode="numeric" type="number" value="100" min="10" max="10000" />
+                        <span> 分 </span>
+                    </span>
+                </div>
+                <div class="yes-no-content white-noise">
+                    <span>是否加入白噪音</span>
+                    <div class="btn yes-no-btn"></div>
+                </div>
+                <div class="yes-no-content chime">
+                    <span>是否加入頌缽</span>
+                    <div class="btn yes-no-btn"></div>
+                </div>
+                <div class="chime-interval">
+                    <span> 設定頌缽間隔</span>
+                    <span>
+                        <input id="chime-interval" class="count-input" inputmode="numeric" type="number" value="100" min="10" max="10000" />
+                        <span> 秒 </span>
+                    </span>
+                </div>
+                <div class="yes-no-content muyu">
+                    <span>是否加入木魚聲</span>
+                    <div class="btn yes-no-btn yes-btn"></div>
+                </div>
+                <div class="muyu-interval">
+                    <span>木魚聲頻率</span>
+                    <span>
+                        <input id="chime-interval" class="count-input" inputmode="numeric" type="number" value="100" min="10" max="10000" />
+                        <span> BPM </span>
+                    </span>
+                </div>
+                <button class="btn submit-btn auto-mode-submit-btn">確認</button>
+            </div>
+        </div>
+        <div class="win menual-mode-setting-panel">
+            <div class="setting-panel-content-wrapper">
+                <h1 class="title">手動模式</h1>
+                <div class="yes-no-content white-noise">
+                    <span>是否加入白噪音</span>
+                    <div class="btn yes-no-btn"></div>
+                </div>
+                <div class="yes-no-content chime">
+                    <span>是否加入頌缽</span>
+                    <div class="btn yes-no-btn"></div>
+                </div>
+                <div class="chime-interval">
+                    <span>設定頌缽間隔</span>
+                    <span>
+                        <input id="chime-interval" class="count-input" inputmode="numeric" type="number" value="100" min="10" max="10000" />
+                        <span> 秒 </span>
+                    </span>
+                </div>
+                <div class="fo-name-count">
+                    <span>設定念佛次數</span>
+                    <span>
+                        <input id="chime-interval" class="count-input" inputmode="numeric" type="number" value="100" min="10" max="10000" />
+                        <span> 秒 </span>
+                    </span>
+                </div>
+                <div class="btn submit-btn menual-mode-submit-btn">確認</div>
+            </div>
+        </div>
+        <div class="win auto-mode-main-page"><h1>auto mode main page</h1></div>
+        <div class="win menual-mode-main-page"><h1>menual mode main page</h1></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.yes-no-btn').forEach((btn) => {
+                    btn.classList.add('yes-btn')
+                    btn.addEventListener('touchend', () => {
+                        if (btn.classList.contains('yes-btn')) {
+                            btn.classList.remove('yes-btn')
+                            btn.classList.add('no-btn')
+                        } else {
+                            btn.classList.remove('no-btn')
+                            btn.classList.add('yes-btn')
+                        }
+                    })
+                })
+            })
+            var modeChosenPage = document.querySelector('.mode-chosen-page')
+            var autoModeSettingPanel = document.querySelector('.auto-mode-setting-panel')
+            var menualModeSettingPanel = document.querySelector('.menual-mode-setting-panel')
+            var autoModeMainPage = document.querySelector('.auto-mode-main-page')
+            var menualModeMainPage = document.querySelector('.menual-mode-main-page')
+            var goPrevPageBtn = document.querySelector('.go-prev-page-btn')
+
+            var current_page = 0
+
+            hideWin = () => {
+                document.querySelectorAll('.win').forEach((win) => {
+                    win.style['display'] = 'none'
+                })
+            }
+            showModeChosenPage = () => {
+                document.querySelector('.mode-chosen-page').style['display'] = 'grid'
+                current_page = 0
+            }
+            showAutoModeSettingPanel = () => {
+                document.querySelector('.auto-mode-setting-panel').style['display'] = 'grid'
+                current_page = 1
+            }
+            showMenualModeSettingPanel = () => {
+                document.querySelector('.menual-mode-setting-panel').style['display'] = 'grid'
+                current_page = 2
+            }
+            showAutoModeMainPage = () => {
+                document.querySelector('.auto-mode-main-page').style['display'] = 'grid'
+                current_page = 3
+            }
+            showMenualModeMainPage = () => {
+                document.querySelector('.menual-mode-main-page').style['display'] = 'grid'
+                current_page = 4
+            }
+
+            document.querySelector('.choose-auto-mode-btn').addEventListener('touchend', () => {
+                hideWin()
+                showAutoModeSettingPanel()
+            })
+            document.querySelector('.choose-menual-mode-btn').addEventListener('touchend', () => {
+                hideWin()
+                showMenualModeSettingPanel()
+            })
+            document.querySelector('.auto-mode-submit-btn').addEventListener('touchend', () => {
+                hideWin()
+                showAutoModeMainPage()
+            })
+            document.querySelector('.menual-mode-submit-btn').addEventListener('touchend', () => {
+                hideWin()
+                showMenualModeMainPage()
+            })
+            document.querySelector('.go-prev-page-btn').addEventListener('touchend', () => {
+                switch (current_page) {
+                    case 1:
+                    case 2:
+                        hideWin()
+                        showModeChosenPage()
+                        break
+                    case 3:
+                        hideWin()
+                        showAutoModeSettingPanel()
+                        break
+                    case 4:
+                        hideWin()
+                        showMenualModeSettingPanel()
+                        break
+                }
+            })
+        </script>
+    </body>
+</html>
